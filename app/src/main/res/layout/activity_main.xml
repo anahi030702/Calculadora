@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#4F5E1E1E">
+
+<Button
+    android:id="@+id/cero"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/signo"
+    app:layout_constraintHorizontal_chainStyle="spread_inside"
+    android:text="0"
+    android:textSize="50dp"
+    android:onClick="EscribeCero"
+    />
+
+    <Button
+        android:id="@+id/signo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cero"
+        app:layout_constraintEnd_toStartOf="@+id/borrar"
+        android:text="="
+        android:textSize="50dp"
+        android:onClick="mostraresultado"
+        />
+
+    <Button
+        android:id="@+id/borrar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/signo"
+        app:layout_constraintEnd_toStartOf="@+id/suma"
+        android:text="AC"
+        android:textSize="30dp"
+        android:onClick="LimpiaResul"
+        />
+
+    <Button
+        android:id="@+id/suma"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="+"
+        android:textSize="50dp"
+        android:onClick="OpSuma"
+        />
+
+    <Button
+        android:id="@+id/uno"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/cero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/signo"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:text="1"
+        android:textSize="50dp"
+        android:onClick="EscribeUno"
+        />
+
+    <Button
+        android:id="@+id/dos"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/signo"
+        app:layout_constraintStart_toEndOf="@+id/cero"
+        app:layout_constraintEnd_toStartOf="@+id/borrar"
+        android:text="2"
+        android:textSize="50dp"
+        android:onClick="EscribeDos"
+        />
+
+    <Button
+        android:id="@+id/tres"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/borrar"
+        app:layout_constraintStart_toEndOf="@+id/signo"
+        app:layout_constraintEnd_toStartOf="@+id/resta"
+        android:text="3"
+        android:textSize="50dp"
+        android:onClick="EscribeTres"
+        />
+
+    <Button
+        android:id="@+id/resta"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/suma"
+        app:layout_constraintStart_toEndOf="@+id/borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="-"
+        android:textSize="50dp"
+        android:onClick="OpResta"
+        />
+
+    <Button
+        android:id="@+id/cuatro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/uno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/signo"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:text="4"
+        android:textSize="50dp"
+        android:onClick="EscribeCuatro"
+        />
+
+    <Button
+        android:id="@+id/cinco"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/dos"
+        app:layout_constraintStart_toEndOf="@+id/cero"
+        app:layout_constraintEnd_toStartOf="@+id/borrar"
+        android:text="5"
+        android:textSize="50dp"
+        android:onClick="EscribeCinco"
+        />
+
+    <Button
+        android:id="@+id/seis"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/tres"
+        app:layout_constraintStart_toEndOf="@+id/signo"
+        app:layout_constraintEnd_toStartOf="@+id/multi"
+        android:text="6"
+        android:textSize="50dp"
+        android:onClick="EscribeSeis"
+        />
+
+    <Button
+        android:id="@+id/multi"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/resta"
+        app:layout_constraintStart_toEndOf="@+id/borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="x"
+        android:textSize="50dp"
+        android:onClick="OpMulti"
+        />
+
+    <Button
+        android:id="@+id/siete"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/cuatro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/signo"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:text="7"
+        android:textSize="50dp"
+        android:onClick="EscribeSiete"
+        />
+
+    <Button
+        android:id="@+id/ocho"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/cinco"
+        app:layout_constraintStart_toEndOf="@+id/cero"
+        app:layout_constraintEnd_toStartOf="@+id/borrar"
+        android:text="8"
+        android:textSize="50dp"
+        android:onClick="EscribeOcho"
+        />
+
+    <Button
+        android:id="@+id/nueve"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/seis"
+        app:layout_constraintStart_toEndOf="@+id/signo"
+        app:layout_constraintEnd_toStartOf="@+id/division"
+        android:text="9"
+        android:textSize="50dp"
+        android:onClick="EscribeNueve"
+        />
+
+    <Button
+        android:id="@+id/division"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/multi"
+        app:layout_constraintStart_toEndOf="@+id/borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="/"
+        android:textSize="50dp"
+        android:onClick="opdividir"
+        />
+
+    <TextView
+        android:id="@+id/caja"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/nueve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="viewEnd"
+        android:text="0"
+        android:textSize="70dp"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
